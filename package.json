@@ -1,0 +1,37 @@
+{
+  "name": "arraybuffer-concat",
+  "version": "0.0.1",
+  "description": "Concatenate ArrayBuffers",
+  "main": "arraybuffer-concat.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelmota/arraybuffer-concat"
+  },
+  "keywords": [
+    "concat",
+    "concatenate",
+    "arraybuffer",
+    "typedarray",
+    "array",
+    "buffer"
+  ],
+  "author": {
+    "name": "Miguel Mota",
+    "email": "hello@miguelmota.com",
+    "url": "https://miguelmota.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelmota/arraybuffer-concat/issues"
+  },
+  "homepage": "https://github.com/miguelmota/arraybuffer-concat",
+  "dependencies": {
+    "tape": "^3.0.3"
+  }
+}
