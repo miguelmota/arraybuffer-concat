@@ -1,5 +1,5 @@
 (function(root) {
-  'use strict';
+  'use strict'
 
   function isValidArray(x) {
     return /Int8Array|Int16Array|Int32Array|Uint8Array|Uint8ClampedArray|Uint16Array|Uint32Array|Float32Array|Float64Array|ArrayBuffer/gi.test(Object.prototype.toString.call(x))
@@ -16,9 +16,9 @@
       if (i === 0) return cbuf
       if (!isValidArray(buf)) return cbuf
 
-      var tmp = new Uint8Array(cbuf.byteLength + buf.byteLength);
-      tmp.set(new Uint8Array(cbuf), 0);
-      tmp.set(new Uint8Array(buf), cbuf.byteLength);
+      var tmp = new Uint8Array(cbuf.byteLength + buf.byteLength)
+      tmp.set(new Uint8Array(cbuf), 0)
+      tmp.set(new Uint8Array(buf), cbuf.byteLength)
 
       return tmp.buffer
     }, arrays[0])
@@ -28,14 +28,14 @@
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = arrayBufferConcat;
+      exports = module.exports = arrayBufferConcat
     }
-    exports.arrayBufferConcat = arrayBufferConcat;
+    exports.arrayBufferConcat = arrayBufferConcat
   } else if (typeof define === 'function' && define.amd) {
     define([], function() {
-      return arrayBufferConcat;
-    });
+      return arrayBufferConcat
+    })
   } else {
-    root.arrayBufferConcat = arrayBufferConcat;
+    root.arrayBufferConcat = arrayBufferConcat
   }
-})(this);
+})(this)
