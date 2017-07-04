@@ -2,7 +2,7 @@
   'use strict'
 
   function isValidArray(x) {
-    return /Int8Array|Int16Array|Int32Array|Uint8Array|Uint8ClampedArray|Uint16Array|Uint32Array|Float32Array|Float64Array|ArrayBuffer/gi.test(Object.prototype.toString.call(x))
+    return /Int(8|16|32)Array|Uint(8|8Clamped|16|32)Array|Float(32|64)Array|ArrayBuffer/gi.test({}.toString.call(x))
   }
 
   function arrayBufferConcat(/* arraybuffers */) {
